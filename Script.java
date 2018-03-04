@@ -60,12 +60,13 @@ public class Script {
 		c.setTime(date);
 		
 		//check parameters
-		if(args.length != 2){
+		if(args.length != 1){
 			System.out.println("Usage \"java Script TO_HIRE\"\n Make sure that all the letters you enter are in the project location and that the folder in which the Script is executed is already git initialized!");
+			System.out.println(args[0]);
 			return;
 		}
 		//Init
-		String toWrite=args[1];
+		String toWrite=args[0];
 		int size = toWrite.length();
 		
 		if(size > 7){
@@ -81,8 +82,8 @@ public class Script {
 		for(int i=0;i< size;i++){
 			
 			char[] toWriteC= toWrite.toCharArray();
-			System.out.println("/home/maxmassart/Bureau/gitImage/"+toWriteC[i]+".txt");
-			File file= new File("/home/maxmassart/Bureau/gitImage/"+toWriteC[i]+".txt");
+			System.out.println("/home/mmassart/Desktop/public-repo/"+toWriteC[i]+".txt");
+			File file= new File("/home/mmassart/Desktop/public-repo/"+toWriteC[i]+".txt");
 			
 			Scanner in=null;
 			try {
